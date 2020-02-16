@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Mohsin Project</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+ {% comment %} custom css {% endcomment %}
+ <link rel="stylesheet" href="{% static 'mohsin_app/css/style.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+<div class="container">
+  <a class="navbar-brand" href="{% url 'about_page' %}">
+  <img class="logo" src="{% static '/mohsin_app/images/justme.jpg' %}" alt='nuTekGeek'>
+  </a>
+ </div> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">F
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about_page' %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login_page' %}">Login</a>
+      </li>     
+    </ul>
+  </div>
+</nav>
+{% block content %}
+<div class="container">
+ <h1>Full stack webdevelopment</h1>
+ <p>This website is built from the ground up. It has all the elements of latest front-end and backend technologies. In the front-end, we use HTML5, CSS3, JavaScript JQuery with a Bootstrap4 framework. In the backend side, we use Python especially comprehensive DJANGO3. This website is both dynamic and responsive. In the tech revolution era, website is sin qua non. If any institution or an individual is not <em>online</em> then it is impossible to imagine one's existence and for businesses there is no way to achieve growth. Therefore it is aptly said that "if you are not online then you are not really in business."</p>
+ </div>
+ <div class="jumbotron">
+	 <h1 class="display-3">Backend Technology:Python Django</h1>
+	 <p class="lead text-danger">Django is an open-source framework for backend web applications based on Python — one of the top web development languages. Its main goals are simplicity, flexibility, reliability, and scalability. Django has its own naming system for all functions and components (e.g., HTTP responses are called “views”). It also has an admin panel, which is deemed easier to work with than in Lavarel or Yii, and other technical features</p>
+	 <hr class="my-2">
+	 <p class="text-success">Additionally, Django provides a dynamic CRUD (create, read, update and delete) interface, configured with admin models and generated via introspection. CRUD is used to describe the basic database commands, which means the interface facilitates viewing, changing, and searching for information.The principles of rapid development, which means developers can do more than one iteration at a time without starting the whole schedule from scratch;
+	DRY philosophy — Don’t Repeat Yourself — which means developers can reuse existing code and focus on the unique one.</p>
+	 <p class="lead">
+		 <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Explore More</a>
+	 </p>
+ </div>
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ {% endblock %}
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
